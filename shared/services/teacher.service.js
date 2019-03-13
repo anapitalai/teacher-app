@@ -17,7 +17,8 @@ var Subject_1 = require("rxjs/Subject");
 var TeacherService = (function () {
     function TeacherService(http) {
         this.http = http;
-        this.url = 'http://localhost:3007/teachers';
+        //private url:string='http://localhost:3007/teachers';
+        this.authUrl = 'http://chervicontraining.com:3006/teachers';
         //observable source
         this.contactDeletedSource = new Subject_1.Subject();
         this.contactCreatedSource = new Subject_1.Subject();

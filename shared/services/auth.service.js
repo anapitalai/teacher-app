@@ -16,7 +16,8 @@ var Observable_1 = require("rxjs/Observable");
 var AuthService = (function () {
     function AuthService(authHttp) {
         this.authHttp = authHttp;
-        this.authUrl = 'http://localhost:3007/users/login';
+        //private authUrl='http://localhost:3007/users/login';
+        this.authUrl = 'http://chervicontraining.com:3006/users/login';
         this.loggedIn = false;
         this.token = localStorage.getItem('token');
         //testing

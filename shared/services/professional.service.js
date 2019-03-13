@@ -17,7 +17,8 @@ var Subject_1 = require("rxjs/Subject");
 var ProfessionalService = (function () {
     function ProfessionalService(http) {
         this.http = http;
-        this.url = 'http://localhost:3007/professionals';
+        // private url:string='http://localhost:3007/professionals';
+        this.authUrl = 'http://chervicontraining.com:3006/professionals';
         //observable source
         this.deletedProfessionalSource = new Subject_1.Subject();
         this.createdProfessionalSource = new Subject_1.Subject();

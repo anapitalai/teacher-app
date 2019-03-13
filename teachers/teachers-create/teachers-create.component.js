@@ -14,7 +14,8 @@ var forms_1 = require("@angular/forms");
 var router_1 = require("@angular/router");
 var http_1 = require("@angular/http");
 var teacher_service_1 = require("../../shared/services/teacher.service");
-var uri = 'http://localhost:3007/teachers';
+//const uri='http://localhost:3007/teachers';
+var uri = 'http://chervicontraining.com:3006/teachers';
 var TeachersCreateComponent = (function () {
     function TeachersCreateComponent(http, router, service, fb) {
         this.http = http;
@@ -67,7 +68,7 @@ var TeachersCreateComponent = (function () {
         fd.append('name', this.form.value.name);
         fd.append('username', this.form.value.username);
         fd.append('nid', this.form.value.nid);
-        this.http.post('http://localhost:3007/teachers', fd)
+        this.http.post(uri, fd)
             .subscribe(function (res) {
             console.log(res);
         });

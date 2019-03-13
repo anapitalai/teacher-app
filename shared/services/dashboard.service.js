@@ -17,7 +17,8 @@ var Subject_1 = require("rxjs/Subject");
 var DashboardService = (function () {
     function DashboardService(http) {
         this.http = http;
-        this.url = 'http://localhost:3007/users';
+        //private url:string='http://localhost:3007/users';
+        this.authUrl = 'http://chervicontraining.com:3006/users';
         //observable source
         this.userDeletedSource = new Subject_1.Subject();
         this.userCreatedSource = new Subject_1.Subject();
